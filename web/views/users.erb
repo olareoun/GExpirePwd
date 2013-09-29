@@ -1,0 +1,49 @@
+<div class="page-header">
+	Users
+</div>
+
+<p class="lead">
+    Domain Users for: <span class="domain"><%= @domain %></span>
+</p>
+
+<ul id="users">
+	<% @userNames.each do |userName| %>
+		<li class="ui-state-default" id="<%= userName %>">
+			<a href="#" onclick="$('#email').val('<%= userName %>'); $('#change-form').submit();">
+				<%= userName %>
+			</a>
+		</li>
+	<% end %>
+</ul>
+
+<div id='hiddenForm'>
+	<form method='POST' action='/domain/changePasswordNextTime' name='change-form' id='change-form'>
+	  <fieldset>
+	    <input name='email' id='email' />
+	  </fieldset>
+	</form>
+	<form method='POST' action='/domain/files' name='files-form' id='files-form'>
+	  <fieldset>
+	    <input name='sortedIdsStr' id='sortedIdsStr' />
+	  </fieldset>
+	</form>
+</div>
+
+<button id="getFiles" class="btn arrange">
+	<div id="imgBtnDiv" width="15px" height="15px">
+		<img src='img/files.png' alt='Generate slideshow' id="submitImg"/>
+	</div>
+</button>
+
+  <script>
+  	window.onload = function(){
+  		$("#users").sortable();
+  		$("#getFiles").click(function(){
+  					$('#sortedIdsStr').val($('#users').sortable('toArray').toString());
+  					$('#files-form').submit();
+				      $('#submitImg').css('visibility', 'hidden');
+				      $('#imgBtnDiv').spin(APP.spinOpts);
+  				});
+  	};
+  </script>
+
