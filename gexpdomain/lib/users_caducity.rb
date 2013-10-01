@@ -17,11 +17,22 @@ module Users
 			@caducities.map(&:user).include? user
 		end
 
+		def caducatesOn(date)
+			@caducities.select{|userCaducity| userCaducity.caducity == date}.map(&:user)
+		end
+
+		def setNewCaducity(users, days)
+			usersCaducityToReset = @caducities.select{|userCaducity| users.include? userCaducity.user}
+			usersCaducityToReset.each do |userCaducity|
+				userCaducity.caducity = userCaducity.caducity + days
+			end
+		end
+
 	end
 
 	class UserCaducity
 
-		attr_accessor :user
+		attr_accessor :user, :caducity
 
 		def initialize(user, caducity)
 			@user = user

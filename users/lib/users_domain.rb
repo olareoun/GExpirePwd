@@ -24,14 +24,13 @@ module Users
 			result.data.users.map{|user| user['primaryEmail']}
 		end
 
-		def getUsersWithoutCaducity(usersCaducity = nil)
-			emails = getUsers
-			return emails if usersCaducity.nil?
-			extractUsersWithoutCaducity emails, usersCaducity
-		end
-
-		def extractUsersWithoutCaducity(emails, usersCaducity)
-			emails.reject{|email| usersCaducity.include? email}
+		def shouldResetPassword?(email)
+			user = @client.execute(
+				:api_method => @api.users.get, 
+				:parameters => {
+					'userKey' => email
+				})
+			!user.data['changePasswordAtNextLogin'].nil? && user.data['changePasswordAtNextLogin']
 		end
 
 		def changePasswordNextTime(email)
@@ -44,7 +43,6 @@ module Users
 				:parameters => {
 					'userKey' => email
 				})
-			puts user.status
 		end
 
 		def isAdmin
