@@ -1,5 +1,5 @@
 body {
-  background-color: #F5F7E7;
+  background-color: white;
   margin-top: 20px;
   font-family: 'Noto Serif', serif;
   padding-top: 50px;
@@ -331,13 +331,6 @@ p.title{
 }
 
 .footer{
-	width: 100%;
-	text-align: center;
-	background-color: #5a5555;
-	color: white;
-	height: 100px;
-	margin: 20px;
-	padding-bottom: 20px;
 }
 
 .landing-section .description{

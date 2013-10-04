@@ -1,0 +1,94 @@
+/* Special class on .container surrounding .menu, used for positioning it into place. */
+.menu-wrapper {
+  position: relative;
+  z-index: 15;
+}
+
+.menu.transparent.menu-inverse .menu-inner {
+  background: rgba(0,0,0,0.4);
+  height: 720px;
+}
+
+.menu.transparent a{
+  color: white;
+  font-size: 20px;
+}
+
+.menu {
+    border-radius: 4px 4px 4px 4px;
+    padding-top: 50px;
+}
+
+.menu {
+    border: 1px solid rgba(0, 0, 0, 0);
+    margin-bottom: 20px;
+    min-height: 50px;
+    position: relative;
+    z-index: 1000;
+}
+
+.menu-fixed-top, .menu-fixed-bottom {
+    border-width: 0 0 1px;
+    left: 0;
+    position: fixed;
+    right: 0;
+}
+
+.menu-fixed-top, .menu-fixed-bottom {
+    border-radius: 0 0 0 0;
+}
+
+.menu-fixed-top {
+    top: 0;
+    z-index: 1030;
+}
+
+.menu-right {
+    float: right !important;
+    width: 120px;
+}
+
+.menu-item{
+    color: white;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: black;
+    width: 100%;
+    opacity: 0.4;
+    filter: alpha(opacity=40);
+}
+
+.menu-item:hover{
+    opacity: 1.0;
+    filter: alpha(opacity=100);
+}
+
+.menu-item.login{
+    background-color: orange;
+}
+
+.menu-wrapper .menu {
+    border-radius: 4px 4px 4px 4px;
+}
+.menu:before, .menu:after {
+    content: " ";
+    display: table;
+}
+.menu:before, .menu:after {
+    content: " ";
+    display: table;
+}
+.menu:after {
+    clear: both;
+}
+.menu:before, .menu:after {
+    content: " ";
+    display: table;
+}
+.menu:after {
+    clear: both;
+}
+.menu:before, .menu:after {
+    content: " ";
+    display: table;
+}

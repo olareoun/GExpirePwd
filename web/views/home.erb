@@ -1,64 +1,109 @@
-<br />
-<br />
-<div class="row-fluid landing-section">
-	<div class="span4 image">
-		<img src="img/drive.png" class="img-circle"/>
-	</div>
-	<div class="span6">
-		<div class="page-header">
-		    Google Drive
-		</div>
-		<div class="description">
-			<p>Take advantage of the power of Google Drive to manage all your business documentation.</p>
-		</div>
-	</div>
-</div>
 
-<br />
-<br />
-<div class="row-fluid landing-section">
-	<div class="span6">
-		<div class="page-header">
-		    Watchdog
-		</div>
-		<div class="description">
-			<p>Keep all the documentation under the ownership of a centralized domain account.</p>
-		</div>
-	</div>
-	<div class="span4 image">
-		<img src="img/dog-white.png" class="img-circle"/>
-	</div>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../assets/ico/favicon.png">
+    <link href='http://fonts.googleapis.com/css?family=Kite+One' rel='stylesheet' type='text/css'>
+    
+    <title>GExpirePwd</title>
 
-<br />
-<br />
-<div class="row-fluid landing-section">
-	<div class="span4 image">
-		<img src="img/marketplace.png"/>
-	</div>
-	<div class="span6">
-		<div class="page-header">
-		    Marketplace
-		</div>
-		<div class="description">
-			<p>Find and install Watchdog easily in Google Apps Marketplace.</p>
-		</div>
-	</div>
-</div>
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
 
-<br />
-<br />
-<div class="row-fluid landing-section">
-	<div class="span6">
-		<div class="page-header">
-		    Pricing
-		</div>
-		<div class="description">
-			<p>Use Watchdog just for x.xx€ per year/account.</p>
-		</div>
-	</div>
-	<div class="span4 image">
-		<img src="img/monedas.png" class="img-circle"/>
-	</div>
-</div>
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../../assets/js/html5shiv.js"></script>
+      <script src="../../assets/js/respond.min.js"></script>
+    <![endif]-->
 
+    <!-- Custom styles for this template -->
+    <link href="css/carousel.css" rel="stylesheet">
+    <link href="css/menu.css" rel="stylesheet">
+  </head>
+<!-- NAVBAR
+================================================== -->
+  <body>
+    <%= erb :menu %>
+    <%= erb :main %>
+
+
+
+
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+    <div class="container marketing">
+
+      <div class="row featurette" id="que">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">Qué. <span class="text-muted">Gestión passwords para dominios Google.</span></h2>
+          <p class="lead">GExpirePwd es una herramienta pensada para facilitar la gestión de la caducidad de las contraseñas de los usuarios de un dominio de Google.</p>
+        </div>
+        <div class="col-md-5">
+          <img class="featurette-image img-responsive" src="data:image/png;base64," data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette" id="como">
+        <div class="col-md-5">
+          <img class="featurette-image img-responsive" src="data:image/png;base64," data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+        </div>
+        <div class="col-md-7">
+          <h2 class="featurette-heading">Cómo. <span class="text-muted">Manual o automático.</span></h2>
+          <p class="lead">GExpirePwd tiene dos maneras posibles de utilizarse.</p>
+          <p class="lead"><strong>Manual.</strong> Podrás obtener el listado de usuarios de tu dominio y establecer la fecha de caducidad de sus passwords manualmente.</p>
+          <p class="lead"><strong>Automático.</strong> Podrás configurar el número de días de validez de los passwords de tu dominio, para que un proceso automático se encarge del resto. El proceso se encargará de establecer la fecha de caducidad de los passwords en base al número de días configurados.</p>
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette" id="detalle">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">Detalle. <span class="text-muted">Cómo funciona.</span></h2>
+          <p class="lead">GExpirePwd consta de un proceso diario que se encarga de revisar para qué usuarios se debe caducar el password. Dichos usuarios deberán reestablecer el password la próxima vez que se logueen en el dominio. Además, si tenemos configurado para nuestro dominio el número de días de validez de los passwords, se establecerá automáticamente la siguiente fecha de caducidad.</p>
+        </div>
+        <div class="col-md-5">
+          <img class="featurette-image img-responsive" src="data:image/png;base64," data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette" id="cuanto">
+        <div class="col-md-5">
+          <img class="featurette-image img-responsive" src="data:image/png;base64," data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+        </div>
+        <div class="col-md-7">
+          <h2 class="featurette-heading">Cuánto. <span class="text-muted">Económico.</span></h2>
+          <p class="lead">GExpirePwd tiene un coste de x,xx € por usuario/año.</p>
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <%= erb :who %>
+
+      <hr class="featurette-divider">
+
+      <!-- /END THE FEATURETTES -->
+
+
+    </div><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/vendor/jquery-1.8.2.min.js"></script>
+    <script src="js/vendor/bootstrap.min.js"></script>
+    <script src="js/vendor/holder.min.js"></script>
+  </body>
+</html>
